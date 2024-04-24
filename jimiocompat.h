@@ -88,6 +88,8 @@ int Jim_OpenForRead(const char *filename);
         #endif
         #if defined(HAVE_LSTAT)
             #define Jim_LinkStat lstat
+        #else
+            #error "HAVE_LSTAT is not defined"
         #endif
     #endif
     #if defined(HAVE_LSEEK64)
